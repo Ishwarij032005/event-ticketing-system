@@ -1,194 +1,336 @@
-# AI Prompts Used — Transparency Log
+# AI Prompts Used — Event Registration & Ticketing Platform
 
-## Overview
-
-This document records the major prompts used during the development of the Event Registration & Ticketing Platform. AI tools were used to assist with architecture planning, backend scaffolding, UI generation, integration, testing, and documentation.
-
-All generated code was reviewed, tested, and integrated manually.
+This document lists all AI prompts used during development of this project to ensure transparency as required.
 
 ---
 
-# 🛠 AI Tools Used
+# 🧠 Tools Used
 
-- Antigravity → Backend generation, integration, audit, seeding
-- Lovable → Frontend UI design and interactions
-- ChatGPT → Planning, feature design, debugging guidance, documentation
-
----
-
-# 🧠 1️⃣ Feature Planning Prompts
-
-Tool: ChatGPT  
-
-Prompt:
-Create a complete feature list for an Event Registration and Ticketing Platform including event management, ticketing, authentication, analytics, concurrency handling, notifications, and admin features.
+* ChatGPT — Architecture planning, feature planning, prompts design, documentation guidance
+* Antigravity — Backend generation, APIs, services, database schema, logic implementation
+* Lovable — UI/UX design and frontend generation
+* Emergent — Frontend logic integration
 
 ---
 
-Prompt:
-Create a final MVP feature grouping for demo highlighting core flows like booking, authentication, ticket generation, and analytics.
+# 🏗 Phase 1 — Architecture & Planning (ChatGPT)
+
+## Prompt
+
+Design a production-ready backend architecture for an Event Registration and Ticketing System using Go.
+
+Include:
+Layered architecture
+REST API design
+Concurrency-safe booking
+JWT authentication
+RBAC
+Email notifications
+Ticket generation with QR code
+Analytics
+Logging
+Database schema
+.env configuration
+
+## Output
+
+System architecture design and feature roadmap.
 
 ---
 
-# 🏗 2️⃣ Architecture Planning
+# 🏗 Phase 2 — Project Structure (Antigravity)
 
-Tool: ChatGPT  
+## Prompt
 
-Prompt:
-Design a scalable system architecture using layered approach with REST APIs, PostgreSQL, JWT authentication, RBAC, and concurrency-safe booking.
+Generate a Go backend project structure using Gin framework with layered architecture.
 
----
+Include folders:
+cmd
+internal/handlers
+internal/services
+internal/repository
+internal/models
+internal/middleware
+pkg/database
+config
+docs
 
-# 🧱 3️⃣ Backend Generation
+## Output
 
-Tool: Antigravity  
-
-Prompt:
-Generate backend project using Go with handlers, services, repository, middleware, models, configuration, and logging.
-
----
-
-Prompt:
-Generate database schema with tables for users, events, registrations, tickets, and audit logs with relationships.
-
----
-
-# 🔐 4️⃣ Authentication & RBAC
-
-Tool: Antigravity  
-
-Prompt:
-Generate JWT authentication, password hashing, role-based access control middleware, and protected routes.
+Backend project skeleton.
 
 ---
 
-# 🎟 5️⃣ Event & Booking APIs
+# 🗄 Phase 3 — Database Schema
 
-Tool: Antigravity  
+## Prompt
 
-Prompt:
-Generate REST APIs for event CRUD, booking, cancellation, remaining seats, and attendee management.
+Design PostgreSQL schema for event ticketing system with tables:
+users
+events
+registrations
+tickets
+audit_logs
 
----
+Include relationships and indexes.
 
-# ⚡ 6️⃣ Concurrency Handling
+## Output
 
-Tool: Antigravity  
-
-Prompt:
-Generate transaction-safe booking logic using database transactions to prevent overbooking under concurrent requests.
-
----
-
-# 🎫 7️⃣ Ticketing System
-
-Tool: Antigravity  
-
-Prompt:
-Generate ticket service with unique ticket ID, QR code generation, and PDF support.
+Database schema and models.
 
 ---
 
-# 📩 8️⃣ Notifications
+# ⚙️ Phase 4 — Core APIs
 
-Tool: Antigravity  
+## Prompt
 
-Prompt:
-Generate email notification service for booking confirmation and password reset.
+Generate REST APIs for:
+Event CRUD
+User registration and login
+Event registration
+Cancel registration
+View attendees
+Remaining seats
 
----
+## Output
 
-# 📊 9️⃣ Analytics
-
-Tool: Antigravity  
-
-Prompt:
-Generate analytics APIs returning total registrations, occupancy percentage, and cancellation metrics.
-
----
-
-# 🎨 🔟 Frontend UI Generation
-
-Tool: Lovable  
-
-Prompt:
-Design premium modern UI for an event ticketing platform using dark glassmorphism design with dashboards, event pages, ticket view, analytics, and authentication pages.
+Core API endpoints.
 
 ---
 
-# ✨ 1️⃣1️⃣ UI Enhancements
+# ⚡ Phase 5 — Concurrency Logic
 
-Tool: Lovable  
+## Prompt
 
-Prompt:
-Add micro-interactions including loading skeletons, hover effects, page transitions, toast notifications, and animated states.
+Generate Go service logic for handling concurrent booking using mutex or transactions to prevent overbooking.
 
----
+## Output
 
-# 🔗 1️⃣2️⃣ Frontend Integration
-
-Tool: Antigravity  
-
-Prompt:
-Integrate frontend with backend APIs including authentication flow, booking flow, ticket fetching, analytics data, and protected routes.
+Concurrency-safe booking logic.
 
 ---
 
-# 🧠 1️⃣3️⃣ Integration Audit
+# 🔐 Phase 6 — Authentication & RBAC
 
-Tool: Antigravity  
+## Prompt
 
-Prompt:
-Perform full integration audit verifying authentication, booking flow, concurrency safety, ticketing, analytics, admin features, and security.
+Generate JWT authentication and RBAC middleware for Admin and User roles.
 
----
+## Output
 
-# 🛠 1️⃣4️⃣ Fixes After Audit
-
-Tool: Antigravity  
-
-Prompt:
-Implement fixes from integration audit including PDF serving improvements, service consistency, and response mismatches.
+Auth middleware and role management.
 
 ---
 
-# 🌱 1️⃣5️⃣ Seed Data Generation
+# 🎟 Phase 7 — Ticketing Service
 
-Tool: Antigravity  
+## Prompt
 
-Prompt:
-Generate database seed script to create at least 10 sample events, sample users, registrations, and tickets for demo purposes.
+Generate Go service for ticket generation with unique ticket ID, PDF creation, and QR code.
 
----
+## Output
 
-# 📄 1️⃣6️⃣ Documentation Prompts
-
-Tool: ChatGPT  
-
-Prompt:
-Generate professional README.md for project including features, architecture, tech stack, setup instructions, and API overview.
+Ticket generation module.
 
 ---
 
-Prompt:
-Generate DESIGN.md including system architecture, database design, concurrency handling, key decisions, and challenges.
+# 📩 Phase 8 — Email Service
+
+## Prompt
+
+Generate Go email service using SMTP for sending ticket confirmation and password reset emails.
+
+## Output
+
+Email notification service.
 
 ---
 
-Prompt:
-Generate PROMPTS.md documenting all AI prompts used during development.
+# 📊 Phase 9 — Analytics
+
+## Prompt
+
+Generate analytics endpoints returning total registrations, occupancy percentage, and cancellation rate.
+
+## Output
+
+Analytics APIs.
 
 ---
 
-# 🎯 Notes
+# 🧾 Phase 10 — Logging
 
-- AI tools were used to accelerate development and generate scaffolding.
-- All generated code was reviewed and tested manually.
-- Core logic understanding and debugging were performed independently.
-- Final system integration and testing were done manually.
+## Prompt
+
+Generate structured logging middleware using logrus for Go APIs.
+
+## Output
+
+Logging middleware.
 
 ---
 
-# ✅ Transparency Statement
+# ❤️ Phase 11 — Health Check
 
-This project was developed with the assistance of AI tools while maintaining full understanding of the architecture, implementation, and system behavior. AI was used as a productivity tool and not as a replacement for engineering decisions.
+## Prompt
+
+Generate health check endpoint and configuration loading using .env file.
+
+## Output
+
+Health monitoring endpoint.
+
+---
+
+# 📄 Phase 12 — Documentation
+
+## Prompt
+
+Generate README with setup instructions, architecture overview, and API documentation.
+
+## Output
+
+Project documentation.
+
+---
+
+# 🚀 Phase 13 — Extended Features
+
+## Prompts Used
+
+Generate forgot password and reset password flow using email token verification in Go.
+
+Generate APIs for searching and filtering events by keyword, date range, availability, and ticket type.
+
+Add event lifecycle states (Draft, Published, Cancelled) with validation logic.
+
+Add support for multiple ticket types (VIP, Regular, Group) with pricing and availability.
+
+Generate API for transferring ticket ownership between users with validation.
+
+Generate audit logging system tracking user actions like event creation, booking, cancellation.
+
+Generate admin APIs for managing users, events, analytics, and ticket types.
+
+Generate rate limiting middleware for Go APIs using token bucket.
+
+Generate background job worker using goroutines for sending event reminders and notifications.
+
+Generate load testing endpoint simulating multiple concurrent booking requests.
+
+Generate caching layer for events list using in-memory cache.
+
+Generate APIs for attendee management including list attendees, RSVP, and feedback submission.
+
+Add versioned API structure (/api/v1) with routing changes.
+
+---
+
+# 🎨 Phase 14 — UI Generation (Lovable)
+
+## Prompt
+
+Design a premium modern web application UI for an Event Registration and Ticketing Platform.
+
+Pages:
+Landing
+Login
+Register
+Forgot password
+Events listing
+Event details
+Dashboard
+Ticket view
+Admin dashboard
+Create event
+Attendees
+Analytics
+Profile
+
+Include glassmorphism, animations, hover effects, and responsive layout.
+
+## Output
+
+Complete frontend UI with design system.
+
+---
+
+# 🎨 Phase 15 — UI Enhancements
+
+## Prompt
+
+Improve UX with micro-interactions including loading skeletons, animations, hover effects, and toast notifications.
+
+## Output
+
+Enhanced UI interactions.
+
+---
+
+# 🔗 Phase 16 — Frontend Integration (Antigravity / Emergent)
+
+## Prompt
+
+Integrate frontend with backend REST APIs.
+
+Add:
+JWT authentication flow
+API calls
+Form validation
+Protected routes
+State management
+Error handling
+Ticket workflows
+
+## Output
+
+Fully functional frontend logic.
+
+---
+
+# 🧪 Phase 17 — Performance Optimization
+
+## Prompt
+
+Optimize frontend with lazy loading, code splitting, and memoization.
+
+## Output
+
+Performance improvements.
+
+---
+
+# 📊 Phase 18 — Final Feature Planning (ChatGPT)
+
+Prompt discussions included:
+
+Feature prioritization
+Concurrency strategy
+System flow design
+UI planning
+Integration checklist
+Testing checklist
+Deployment guidance
+
+---
+
+# 🧾 Transparency Note
+
+Some prompts were refined iteratively during development.
+This document represents an accurate and honest summary of all prompts used throughout the project lifecycle.
+
+---
+
+# ✅ Result
+
+AI tools were used for assistance in:
+
+Architecture design
+Code generation
+UI design
+Integration logic
+Documentation
+
+All generated code was reviewed, tested, and validated manually.
+
+---
