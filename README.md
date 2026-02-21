@@ -125,6 +125,26 @@ npm run dev
 - `GET /api/v1/registrations` - View my tickets
 
 
+## 📸 Application Screenshots
+
+### Dashboard
+![Dashboard](docs/screenshots/dashboard.png)
+
+### Events
+![Events](docs/screenshots/events.png)
+
+### Tickets
+![Tickets](docs/screenshots/tickets.png)
+
+### Attendees
+![Attendees](docs/screenshots/attendees.png)
+
+### Analytics
+![Analytics](docs/screenshots/analytics.png)
+
+### Settings
+![Settings](docs/screenshots/settings.png)
+
 ## 🛡️ Concurrency Handling
 
 The platform implements **Pessimistic Locking** to handle high-concurrency ticket bookings. When a user attempts to register:
