@@ -128,22 +128,22 @@ npm run dev
 ## 📸 Application Screenshots
 
 ### Dashboard
-![Dashboard](docs/screenshots/dashboard.png)
+![Dashboard](docs/Screenshots/dashboard.png)
 
 ### Events
-![Events](docs/screenshots/events.png)
+![Events](docs/Screenshots/events.png)
 
 ### Tickets
-![Tickets](docs/screenshots/tickets.png)
+![Tickets](docs/Screenshots/tickets.png)
 
 ### Attendees
-![Attendees](docs/screenshots/attendees.png)
+![Attendees](docs/Screenshots/attendees.png)
 
 ### Analytics
-![Analytics](docs/screenshots/analytics.png)
+![Analytics](docs/Screenshots/analytics.png)
 
 ### Settings
-![Settings](docs/screenshots/settings.png)
+![Settings](docs/Screenshots/settings.png)
 
 ## 🛡️ Concurrency Handling
 
