@@ -124,14 +124,6 @@ npm run dev
 - `POST /api/v1/registrations` - Book a ticket
 - `GET /api/v1/registrations` - View my tickets
 
-## 📸 Screenshots
-
-> [!NOTE]
-> Screenshots will be added here upon final deployment.
-
-| Landing Page | Admin Dashboard |
-| :---: | :---: |
-| ![Placeholder Landing](https://via.placeholder.com/400x250?text=Landing+Page) | ![Placeholder Admin](https://via.placeholder.com/400x250?text=Admin+Dashboard) |
 
 ## 🛡️ Concurrency Handling
 
@@ -152,8 +144,8 @@ This ensures that even if 1,000 users click "Register" simultaneously for the la
 ## ✍️ Author
 
 **Your Name**
-- GitHub: [@username](https://github.com/username)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+- GitHub: [@username](https://github.com/Ishwarij032005)
+- LinkedIn: [Your Profile](https://www.linkedin.com/in/ishwari-jamadade-99b383297/)
 
 ---
 *Built for excellence.*
