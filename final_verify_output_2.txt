@@ -1,0 +1,32 @@
+
+=== Backend Health ===
+  [PASS] Backend is UP
+
+=== Frontend Health ===
+  [PASS] Frontend is UP (port 5173)
+
+=== Registration with Admin Role ===
+  [PASS] Admin registration succeeded
+
+=== Login and JWT Role Claim ===
+  [PASS] Login succeeded, token received
+  [PASS] JWT contains role=admin
+  [PASS] JWT user_id: be63a2cb-4636-468f-b221-a9ebc982640e
+
+=== RBAC Reject Unauthenticated ===
+  [PASS] Correctly rejected (401)
+
+=== Create Event Admin Only ===
+  [PASS] Event created: ID=f6cfdd1f-41b0-4af6-a0b8-e618ef856dd1
+  [PASS] Title: Verification Event 104535
+  [PASS] Status: draft
+
+=== Image Upload Endpoint ===
+  [PASS] Image uploaded! URL: /uploads/events/7f67f1d3-2f16-4d93-9398-58c05dbf014e.png
+
+=== List Events Public ===
+  [PASS] Events endpoint reachable. Total published: 0
+
+==============================================
+ RESULTS: 12 PASSED   0 FAILED
+==============================================

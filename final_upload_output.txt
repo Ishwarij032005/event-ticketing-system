@@ -1,0 +1,7 @@
+Got token: YES
+
+=== Testing upload endpoint ===
+HTTP 400 : 
+
+=== Testing create event ===
+Event created! ID: c012c137-3dc9-4fcc-94fb-7b8a611669a1
