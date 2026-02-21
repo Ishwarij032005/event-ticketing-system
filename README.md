@@ -144,8 +144,8 @@ This ensures that even if 1,000 users click "Register" simultaneously for the la
 ## ✍️ Author
 
 **Your Name**
-- GitHub: [@username](https://github.com/Ishwarij032005)
-- LinkedIn: [Your Profile](https://www.linkedin.com/in/ishwari-jamadade-99b383297/)
+- GitHub: [@Ishwaris_profile](https://github.com/Ishwarij032005)
+- LinkedIn: [Ishwari_Jamadade](https://www.linkedin.com/in/ishwari-jamadade-99b383297/)
 
 ---
 *Built for excellence.*
