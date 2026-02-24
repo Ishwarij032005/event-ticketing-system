@@ -22,7 +22,8 @@ export default function EventCard({
   remaining_tickets,
   price,
   category,
-  gradient = "bg-gradient-to-br from-blue-600 to-purple-700"
+  gradient = "bg-gradient-to-br from-blue-600 to-purple-700",
+  image
 }: EventCardProps) {
   const formattedDate = new Date(start_time).toLocaleDateString('en-US', {
     month: 'short',
@@ -35,8 +36,17 @@ export default function EventCard({
       transition={{ duration: 0.3 }}
     >
       <Link to={`/events/${id}`} className="block glass rounded-2xl overflow-hidden card-elevate group">
-        {/* Image placeholder */}
-        <div className={`h-44 ${gradient} relative overflow-hidden`}>
+        {/* Event Image */}
+        <div className="h-44 relative overflow-hidden">
+          {image ? (
+            <img
+              src={image.startsWith('http') ? image : `http://localhost:8081${image}`}
+              alt={title}
+              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+            />
+          ) : (
+            <div className={`w-full h-full ${gradient}`} />
+          )}
           <motion.div
             className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/5 transition-colors duration-300"
           />

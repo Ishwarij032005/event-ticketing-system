@@ -30,9 +30,19 @@ const TicketCard = memo(({ reg, index, onCancel, isCancelling }: {
     <div className="flex items-center gap-4 glass rounded-2xl p-5 card-elevate group">
       <motion.div
         whileHover={{ rotate: 5 }}
-        className={`w-16 h-16 rounded-xl ${gradients[index % gradients.length]} flex items-center justify-center shrink-0`}
+        className="w-16 h-16 rounded-xl overflow-hidden shrink-0 flex items-center justify-center relative"
       >
-        <Ticket size={24} className="text-foreground/80" />
+        {reg.event?.image_url ? (
+          <img
+            src={reg.event.image_url.startsWith('http') ? reg.event.image_url : `http://localhost:8081${reg.event.image_url}`}
+            alt={reg.event.title}
+            className="w-full h-full object-cover"
+          />
+        ) : (
+          <div className={`w-full h-full ${gradients[index % gradients.length]} flex items-center justify-center`}>
+            <Ticket size={24} className="text-foreground/80" />
+          </div>
+        )}
       </motion.div>
       <div className="flex-1 min-w-0">
         <h3 className="font-semibold group-hover:text-primary transition-colors">{reg.event?.title ?? "Unknown Event"}</h3>

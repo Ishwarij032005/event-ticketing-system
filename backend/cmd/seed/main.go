@@ -97,27 +97,28 @@ func seedEvents(db *gorm.DB) []domain.Event {
 		Category    string
 		Price       float64
 		Tickets     int
+		ImageURL    string
 	}{
-		{"Global Tech Summit 2026", "Leading technology conference exploring AI and Future Tech.", "Tech Conference", 299.0, 500},
-		{"Jazz Under the Stars", "A magical evening of live jazz music in the central park.", "Concert", 45.0, 200},
-		{"Entrepreneurship Workshop", "Hands-on workshop for aspiring startup founders.", "Workshop", 150.0, 50},
-		{"Modern Art Exhibition", "Showcasing works from contemporary artists worldwide.", "Art", 25.0, 300},
-		{"City Marathon 2026", "The annual city marathon for professional and amateur runners.", "Sports", 60.0, 1000},
-		{"Cloud Native Day", "Deep dive into Kubernetes and Cloud Native technologies.", "Conference", 199.0, 150},
-		{"Rock Festival Weekend", "Three days of non-stop rock music from top bands.", "Concert", 120.0, 5000},
-		{"Digital Marketing Masterclass", "Learn the latest trends in SEO, SEM, and social media.", "Workshop", 250.0, 100},
-		{"Photography Workshop", "Master the art of landscape and portrait photography.", "Workshop", 80.0, 30},
-		{"Final Cup Basketball", "The championship final of the national basketball league.", "Sports", 95.0, 20000},
-		{"AI Builders Hackathon", "48-hour challenge to build innovative AI solutions.", "Hackathon", 0.0, 100},
-		{"Frontend Developers Meetup", "Networking and lightning talks for the local frontend community.", "Meetup", 0.0, 60},
-		{"Blockchain Innovators Summit", "Exploring the next generation of decentralized applications.", "Conference", 350.0, 250},
-		{"Salsa Night Carnival", "Dance, music, and food celebrating Latin culture.", "Concert", 35.0, 500},
-		{"Backend Performance Workshop", "Optimization techniques for high-scale Go applications.", "Workshop", 180.0, 40},
-		{"Startup Networking Mixer", "Connect with investors and fellow entrepreneurs in a casual setting.", "Meetup", 15.0, 150},
-		{"Game Dev Hackathon", "Create a playable game prototype in a weekend.", "Hackathon", 10.0, 80},
-		{"Open Source Contributor Day", "Workshop and mentoring for new open source contributors.", "Workshop", 0.0, 50},
-		{"Cybersecurity Forum 2026", "Protecting digital assets in an increasingly connected world.", "Conference", 450.0, 200},
-		{"Python Community Meetup", "Share projects and learn from fellow Pythonistas.", "Meetup", 0.0, 100},
+		{"Global Tech Summit 2026", "Leading technology conference exploring AI and Future Tech.", "Tech Conference", 299.0, 500, "https://images.unsplash.com/photo-1540575861501-7ad060e39fe5?auto=format&fit=crop&w=800&q=80"},
+		{"Jazz Under the Stars", "A magical evening of live jazz music in the central park.", "Concert", 45.0, 200, "https://images.unsplash.com/photo-1511192336575-5a79af67a629?auto=format&fit=crop&w=800&q=80"},
+		{"Entrepreneurship Workshop", "Hands-on workshop for aspiring startup founders.", "Workshop", 150.0, 50, "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"},
+		{"Modern Art Exhibition", "Showcasing works from contemporary artists worldwide.", "Art", 25.0, 300, "https://images.unsplash.com/photo-1541963463532-d68292c34b19?auto=format&fit=crop&w=800&q=80"},
+		{"City Marathon 2026", "The annual city marathon for professional and amateur runners.", "Sports", 60.0, 1000, "https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?auto=format&fit=crop&w=800&q=80"},
+		{"Cloud Native Day", "Deep dive into Kubernetes and Cloud Native technologies.", "Conference", 199.0, 150, "https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80"},
+		{"Rock Festival Weekend", "Three days of non-stop rock music from top bands.", "Concert", 120.0, 5000, "https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80"},
+		{"Digital Marketing Masterclass", "Learn the latest trends in SEO, SEM, and social media.", "Workshop", 250.0, 100, "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"},
+		{"Photography Workshop", "Master the art of landscape and portrait photography.", "Workshop", 80.0, 30, "https://images.unsplash.com/photo-1452784444945-3f422708bcea?auto=format&fit=crop&w=800&q=80"},
+		{"Final Cup Basketball", "The championship final of the national basketball league.", "Sports", 95.0, 20000, "https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=800&q=80"},
+		{"AI Builders Hackathon", "48-hour challenge to build innovative AI solutions.", "Hackathon", 0.0, 100, "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"},
+		{"Frontend Developers Meetup", "Networking and lightning talks for the local frontend community.", "Meetup", 0.0, 60, "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80"},
+		{"Blockchain Innovators Summit", "Exploring the next generation of decentralized applications.", "Conference", 350.0, 250, "https://images.unsplash.com/photo-1516245834210-c4c142787335?auto=format&fit=crop&w=800&q=80"},
+		{"Salsa Night Carnival", "Dance, music, and food celebrating Latin culture.", "Concert", 35.0, 500, "https://images.unsplash.com/photo-1504609773096-104ff2c73ba4?auto=format&fit=crop&w=800&q=80"},
+		{"Backend Performance Workshop", "Optimization techniques for high-scale Go applications.", "Workshop", 180.0, 40, "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"},
+		{"Startup Networking Mixer", "Connect with investors and fellow entrepreneurs in a casual setting.", "Meetup", 15.0, 150, "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80"},
+		{"Game Dev Hackathon", "Create a playable game prototype in a weekend.", "Hackathon", 10.0, 80, "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80"},
+		{"Open Source Contributor Day", "Workshop and mentoring for new open source contributors.", "Workshop", 0.0, 50, "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80"},
+		{"Cybersecurity Forum 2026", "Protecting digital assets in an increasingly connected world.", "Conference", 450.0, 200, "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80"},
+		{"Python Community Meetup", "Share projects and learn from fellow Pythonistas.", "Meetup", 0.0, 100, "https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=800&q=80"},
 	}
 
 	var seededEvents []domain.Event
@@ -126,6 +127,7 @@ func seedEvents(db *gorm.DB) []domain.Event {
 		var existing domain.Event
 		if err := db.Where("title = ?", ed.Title).First(&existing).Error; err != nil {
 			if err == gorm.ErrRecordNotFound {
+				// Create new event
 				e := domain.Event{
 					ID:               uuid.New(),
 					Title:            ed.Title,
@@ -136,7 +138,7 @@ func seedEvents(db *gorm.DB) []domain.Event {
 					TotalTickets:     ed.Tickets,
 					RemainingTickets: ed.Tickets,
 					Price:            ed.Price,
-					ImageURL:         fmt.Sprintf("https://images.unsplash.com/photo-%d", 1500000000000+i),
+					ImageURL:         ed.ImageURL,
 				}
 				db.Create(&e)
 
@@ -164,6 +166,8 @@ func seedEvents(db *gorm.DB) []domain.Event {
 				seededEvents = append(seededEvents, e)
 			}
 		} else {
+			// Update existing event's ImageURL
+			db.Model(&existing).Update("image_url", ed.ImageURL)
 			seededEvents = append(seededEvents, existing)
 		}
 	}

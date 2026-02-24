@@ -87,7 +87,16 @@ export default function EventDetails() {
 
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
           {/* Hero Image */}
-          <div className="h-64 md:h-80 rounded-3xl bg-gradient-to-br from-blue-600 to-purple-700 relative overflow-hidden mb-8">
+          <div className="h-64 md:h-80 rounded-3xl relative overflow-hidden mb-8">
+            {event.image_url ? (
+              <img
+                src={event.image_url.startsWith('http') ? event.image_url : `http://localhost:8081${event.image_url}`}
+                alt={event.title}
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-blue-600 to-purple-700" />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
             <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between">
               <div>

@@ -118,6 +118,7 @@ export default function Events() {
                     remaining_tickets={event.remaining_tickets}
                     price={event.price}
                     category={event.category}
+                    image={event.image_url}
                   />
                 </motion.div>
               ))}
